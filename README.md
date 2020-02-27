@@ -65,6 +65,7 @@ Body:
 To get all tasks using method GET:
 http://<host>/api/tasks
 Response will be something like this (if you have records):
+```json
 [{
 "id": 1,
 "name": "Some task",
@@ -75,28 +76,37 @@ Response will be something like this (if you have records):
 "name": "Some new task2",
 "description": "Some description2"
 }]
+```
 
 To get one task using method GET:
 http://<host>/api/task/<task_number> ( example: http://somedomain.com/api/task/2 )
 Response:
+```json
 {
 "id": 1,
 "name": "Some task",
 "description": "Some description"
 }
+```
 or you'll get 404 error and a message:
+```json
 {
 "status": "error: not found"
 }
+```
 
 To delete task using method DELETE:
-http://<host>/api/task/<task_number> ( example: http://somedomain.com/api/task/2 )
+```url
+http://<host>/api/task/<task_number> 
+```
+( example: http://somedomain.com/api/task/2 )
+
 Respose must be:
-    
+```json    
 {
 "status": "ok"
 }
-
+```
 In some cases you can also get you'll get 404 error and a message:
 ```json
 {
