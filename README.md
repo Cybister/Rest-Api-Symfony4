@@ -15,8 +15,9 @@ http://<host>/createClient
 Request:
 ```json
 {"redirect-uri":"<host>","grant-type":"password"} 
-(example: {"redirect-uri":"somedomain.com","grant-type":"password"}  )
 ```
+(example: {"redirect-uri":"somedomain.com","grant-type":"password"}  )
+
 Response will be something like this:
 ```json
 {
@@ -48,7 +49,9 @@ Response:
 }
 ```
 3. Now to access to the Rest Api we must send token in request headers
+```bash
 Authorization: Bearer ZTFhMzlhNDRkNzg4ZjQ2MzQ5NzhhOTNkNGJjODYyNDgwZDdhMzUzMjYzMTMzOGY2ZTNkYzUzMTI2YmIyY2E1YQ
+```
 
 To add task using POST method:
 http://<host>/api/task
