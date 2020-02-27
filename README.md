@@ -11,7 +11,9 @@ user: test_user
 password: test
 
 1. Create Client using Api request:
+```url
 http://<host>/createClient
+```
 Request:
 ```json
 {"redirect-uri":"<host>","grant-type":"password"} 
@@ -27,7 +29,9 @@ Response will be something like this:
 ```
 
 2. Get token request:
+```url
 http://<host>/oauth/v2/token
+```
 And send:
 ```json
 {
@@ -54,7 +58,9 @@ Authorization: Bearer ZTFhMzlhNDRkNzg4ZjQ2MzQ5NzhhOTNkNGJjODYyNDgwZDdhMzUzMjYzMT
 ```
 
 To add task using POST method:
+```url
 http://<host>/api/task
+```
 Body:
 ```json
 {
@@ -63,7 +69,9 @@ Body:
 }
 ```
 To get all tasks using method GET:
+```url
 http://<host>/api/tasks
+```
 Response will be something like this (if you have records):
 ```json
 [{
@@ -79,19 +87,16 @@ Response will be something like this (if you have records):
 ```
 
 To get one task using method GET:
-http://<host>/api/task/<task_number> ( example: http://somedomain.com/api/task/2 )
+```url
+http://<host>/api/task/<task_number> 
+```
+( example: http://somedomain.com/api/task/2 )
 Response:
 ```json
 {
 "id": 1,
 "name": "Some task",
 "description": "Some description"
-}
-```
-or you'll get 404 error and a message:
-```json
-{
-"status": "error: not found"
 }
 ```
 
