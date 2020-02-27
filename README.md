@@ -11,14 +11,17 @@ password: test
 1. Create Client using Api request:
 http://<host>/createClient
 Request:
+```json
 {"redirect-uri":"<host>","grant-type":"password"} 
 (example: {"redirect-uri":"somedomain.com","grant-type":"password"}  )
-
+```
 Response will be something like this:
+```json
 {
 "client_id": "1_5kxmltngysw8o888ggggwksksk4404kokokgow88scwoc0kw00",
 "client_secret": "1u6pkny4hfb44gcso80o0g4kw84c0wocowso4o8kkgc44skosc"
 }
+```
 
 2. Get token request:
 http://<host>/oauth/v2/token
